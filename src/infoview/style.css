@@ -1,0 +1,8 @@
+.line {
+    font-family: monospace;
+    white-space: pre;
+}
+
+.selected {
+    color: #FFAA00;
+}

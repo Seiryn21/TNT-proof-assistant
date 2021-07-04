@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "module": "esnext",
+        "moduleResolution": "node",
+        "target": "es2021",
+        "outDir": "infoview",
+        "lib": [
+            "es2021",
+            "dom"
+        ],  
+        "jsx": "react",
+        "sourceMap": true,
+        "rootDir": ".",
+        "noUnusedLocals": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "experimentalDecorators": true
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}

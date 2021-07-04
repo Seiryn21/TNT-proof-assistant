@@ -1,0 +1,35 @@
+{
+    "scopeName": "source.tnt",
+    "patterns": [
+        {"include" : "#proof"},
+        {"include" : "#declaration"}
+    ],
+    "repository" : {
+        "proof" : {
+            "begin": "\\bbegin\\b",
+            "end": "\\bend\\b",
+            "beginCaptures": {
+                "0": { "name": "keyword.control.proof.begin" }
+            },
+            "endCaptures": {
+                "0": { "name": "keyword.control.proof.end" }
+            },
+            "patterns": [{ "include": "#line" }, {"include" : "#transformation"}]
+        },
+        "line" : {
+            "name" : "constant.numeric",
+            "match" : "[0-9]+"
+        },
+        "transformation" : {
+            "name" : "keyword.operator",
+            "match" : "\\b(axiom|(open|close)Fantasy|generalize|specialize|existence|symmetry|transitivity|(add|remove)Succ|join|separe|detache)\\b"
+            },
+        "declaration" : {
+            "match" : "\\b(theorem) ([a-zA-Z_]+)",
+            "captures" : {
+                "1" : {"name" : "keyword.control.theorem"},
+                "2" : {"name" : "entity.name.function"}
+            }
+        }
+    }
+  }
